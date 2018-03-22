@@ -1,0 +1,12 @@
+.system
+    .left
+        ul
+            li(v-for='(item,index) in system',:key='index',@click='btnPath(item.classID)',@mouseover="mousemove(index)",@mouseout='mouseleave()',:id='index==id?"active":""',:class='ind==index?"mark":""')
+                router-link(:to='item.path')
+                    span {{item.des}}
+    .right
+       keep-alive
+         router-view(v-if='$route.meta.KeepAlive')
+       router-view(v-if='!$route.meta.KeepAlive')
+        
+    

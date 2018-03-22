@@ -1,0 +1,15 @@
+.navigation_top
+    .nav_left(v-if='computedMsg!=="停止"')
+        p.img
+        //- img(src="../", alt="")
+        .message
+            p CPU 
+                span 当前温度：{{data.message}}℃
+            p 电脑的运算和控制核心
+    .nav_left(v-else)
+        p.img
+        .message
+            p CPU诊断       
+    .nav_right  
+        button(@click='diagnose(false)',v-if='computedMsg!=="停止"') {{computedMsg}} 
+        button(@click='stop(true)' v-else) {{computedMsg}}      

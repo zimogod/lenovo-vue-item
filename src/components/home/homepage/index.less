@@ -1,0 +1,334 @@
+.home-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    .home-left-wrapper {
+        flex: 7;
+        display: flex;
+        flex-direction: column; 
+        // background-color: red;
+        .home-left-top {
+            flex: 0 0 1rem;
+             // background-color: blue;
+            overflow: hidden;
+            .h-title {
+                padding-top: .4rem;
+                text-align: center;
+                font-size: .32rem;
+                line-height: .32rem;
+                font-weight: 200;
+                color: #fff;
+            }
+            .h-desc {
+                padding-top: .1rem;
+                text-align: center;
+                color: #00FFFF;
+            }
+        }
+        .home-left-middle {
+            flex: 1; 
+            // background-color: orange;
+            padding: 0 .6rem;
+            display: flex;
+            align-items: center;
+            .circle {
+                flex: 0 0 1rem;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 50%;
+                background: url("../../../public/images/LPCM_index_memoryandspeedbg@1x.png") no-repeat center center; // background-color: green;
+                line-height: 1rem;
+                text-align: center;
+                // &:hover {
+                //     background-color: red;
+                // }
+            }
+            .home-cpu-use {
+                flex: 1;
+                .cpu-wrapper {
+                    position: relative;
+                    width: 280px;
+                    height: 280px;
+                    // line-height: 2.8rem;
+                    text-align: center;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    // background-color: purple;
+                    // &:hover {
+                    //     background-color: pink;
+                    // }
+                    .cpu-num {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: .36rem;
+                        color: #fff;
+                    }
+                    .dot {
+                        position: absolute;
+                        top: -15px;
+                        left: -15px;
+                        width: 100%;
+                        height: 100%;
+                        border: 15px solid transparent;
+                        border-radius: 50%;
+                        span {
+                            position: absolute;
+                            bottom: 25px;
+                            left: 18px;
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            background-color: rgba(65, 167, 255, 1.0);
+                            &:before {
+                                content: "";
+                                display: inline-block;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 35px;
+                                height: 35px;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                z-index: 99;
+                            }
+                        }
+                    }
+                }
+            }
+            .home-network-speed {
+                flex: 0 0 1rem;
+            }
+        }
+        .home-left-bottom {
+            flex: 0 0 .4rem;
+            // background-color: red;
+            color: #fff;
+            li {
+                float: left;
+                margin-left: .2rem;
+                line-height: .4rem;
+            }
+        }
+    }
+    .home-right-wrapper {
+        flex: 3;
+        position: relative;
+        .home-right-contain {
+            width: 100%;
+            height: 100%;
+            z-index: 6;
+            .user-info {
+                padding-top: .4rem;
+                padding-left: .5rem;
+                height: 0.8rem;
+                .user-img {
+                    float: left;
+                    margin-right: .1rem;
+                    width: .86rem;
+                    height: .86rem;
+                    border-radius: 50%;
+                    background-color: green;
+                    &:hover {
+                        background-color: red;
+                    }
+                }
+                .user-desc {
+                    padding-top: .25rem;
+                    span {
+                        display: block;
+                        &.user-name {
+                            color: #fff;
+                            font-size: .16rem;
+                            line-height: .16rem;
+                            margin-bottom: .1rem;
+                        }
+                        &.user-own {
+                            color: #B8C8DA;
+                            font-size: .12rem;
+                            line-height: .12rem;
+                        }
+                    }
+                }
+            }
+            .user-exclusive {
+                margin: .3rem .2rem 0;
+                padding-top: .15rem;
+                display: flex;
+                li {
+                    flex: 1;
+                    text-align: center;
+                    img {
+                        width: .6rem;
+                        height: .6rem;
+                    }
+                    p {
+                        &.exclusive-title {
+                            color: #fff;
+                            font-size: .14rem;
+                        }
+                        &.exclusive-desc {
+                            color: #B9CBDC;
+                            font-size: .12rem;
+                        }
+                    }
+                }
+            }
+            .link-btn {
+                display: flex;
+                position: absolute;
+                right: 0;
+                bottom: .1rem;
+                width: 100%;
+                li {
+                    flex: 1;
+                    text-align: center;
+                    p {
+                        display: inline-block;
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        &.feedback {
+                            background-image: url("../../../public/images/LPCM_button_index_fankui_default@1x.png");
+                        }
+                        &.feedback:hover {
+                            background-image: url("../../../public/images/LPCM_button_index_fankui_hover@1x.png");
+                        }
+                        &.software-store {
+                            background-image: url("../../../public/images/LPCM_button_index_store_default@1x.png");
+                        }
+                        &.software-store:hover {
+                            background-image: url("../../../public/images/LPCM_button_index_store_hover@1x.png");
+                        }
+                        &.lenovo-mall {
+                            background-image: url("../../../public/images/LPCM_button_index_shangcheng_default.png");
+                        }
+                        &.lenovo-mall:hover {
+                            background-image: url("../../../public/images/LPCM_button_index_shangcheng_hover.png");
+                        }
+                    }
+                    span {
+                        display: block;
+                        color: #fff;
+                        font-size: .13rem;
+                    }
+                }
+            }
+        }
+        .mask {
+            position: absolute;
+            top: -.6rem;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+        }
+        .skin{
+            position: absolute;
+            top: .10rem;
+            left: .20rem;
+            color:#fff;
+            font-size: .14rem;
+            &:hover{
+                color:blue;
+            }
+        }
+        .ground{
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            border: 1px solid #fff;
+            top: .40rem;
+            left: .20rem;
+            z-index: 100;
+            ul{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content:space-around;
+                // align-items:center;
+                align-content:space-around;
+                flex-wrap:wrap; 
+                li{
+                    height: 46%;
+                    width: 42%;
+                }
+                li:nth-child(1){
+                    background: #8aa991;
+                }
+                li:nth-child(2){
+                    background: #00db8a;
+                }
+                li:nth-child(3){
+                    background: #815c7f;
+                }
+                li:nth-child(4){
+                    background: #1693e2;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 645px) and (max-width: 920px) {
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        .home-left-wrapper {
+            height: 5rem;
+        }
+        .home-right-wrapper {
+            height: 5rem;
+            .user-info {
+                margin-bottom: 1rem;
+            }
+            .mask {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 644px) {
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        .home-left-wrapper {
+            // 0height: 7rem;
+            .home-left-middle {
+                flex-direction: column;
+                .circle {
+                    margin: .5rem 0;
+                }
+                .home-cpu-use {
+                    flex: auto;
+                }
+            }
+            .home-left-bottom {
+                margin: 0 auto;
+            }
+        }
+        .home-right-wrapper {
+            height: 4rem;
+            .home-right-contain {
+                .user-info {
+                    padding: 0;
+                    text-align: center;
+                    .user-img {
+                        display: none;
+                    }
+                    .user-desc {
+                        span.user-own {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .mask {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+.dialogue(v-if='data.isShow',:style="{width:data.width,height:data.height,zIndex:data.zIndex}")
+    .top
+        .top-content {{data.topContent?data.topContent:""}}
+        span.dialogue_close(@click='dialogueClose(false)')
+    .content(v-html='data.content')

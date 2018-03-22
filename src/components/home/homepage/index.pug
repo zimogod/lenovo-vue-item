@@ -1,0 +1,52 @@
+.home-wrapper 
+    .home-left-wrapper
+        .home-left-top
+            h1.h-title.bg 芯管家 . 新体验
+            p.h-desc 
+                span 32
+                span 天
+                |始终守护健康设备
+        .home-left-middle
+            .home-momery-use.circle 74%
+            .home-cpu-use 
+                .cpu-wrapper(ref='wrapper')
+                    canvas#circle(:width='vw+"px"', :height='vh+"px"')
+                    span.cpu-num#cpu-num {{count}} 
+                    .dot#dot
+                        span
+            .home-network-speed.circle 5/KB
+        ul.home-left-bottom
+            li {{count}}
+            li 主机编号
+            li 已连接云端诊断引擎
+    .home-right-wrapper
+        .home-right-contain
+            .user-info.clearfix
+                div.user-img
+                p.user-desc
+                    span.user-name 73***52
+                    span.user-own 乐币 1156| 活跃值 994
+            ul.user-exclusive.clearfix
+                li 
+                    img(src="../../../public/images/LPCM_button_tequan_hover.png") 
+                    p.exclusive-title 联想特权
+                    p.exclusive-desc 特权豪礼等你拿
+                li
+                    img(src="../../../public/images/LPCM_button_tequan_hover.png") 
+                    p.exclusive-title 幸运抽奖
+                    p.exclusive-desc 幸运多多抽壕礼
+            ul.link-btn
+                li
+                    p.feedback
+                    span 反馈
+                li
+                    p.software-store
+                    span 软件商店
+                li
+                    p.lenovo-mall
+                    span 联想商城
+        .mask
+            .skin(@click='shin') 换肤
+            .ground(v-if='isSkin')
+                ul
+                    li(v-for='(item,index) in styles')
